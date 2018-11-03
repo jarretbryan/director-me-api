@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2018_11_03_153954) do
     t.string "location"
     t.string "office"
     t.string "direct"
-    t.bigint "departments_id"
+    t.bigint "department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["departments_id"], name: "index_employees_on_departments_id"
+    t.index ["department_id"], name: "index_employees_on_department_id"
   end
 
-  add_foreign_key "employees", "departments", column: "departments_id", on_delete: :cascade
+  add_foreign_key "employees", "departments", on_delete: :cascade
 end

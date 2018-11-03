@@ -6,7 +6,7 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
       t.string :location
       t.string :office
       t.string :direct
-      t.references :departments, foreign_key: {on_delete: :cascade}
+      t.references :department, foreign_key: {on_delete: :cascade}
 
       t.timestamps
     end

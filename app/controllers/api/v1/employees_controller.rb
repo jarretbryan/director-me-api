@@ -33,7 +33,7 @@ class Api::V1::EmployeesController < ApplicationController
     end
 
     def employee_params
-        params.permit(:name, :title, :location, :office, :direct)
+        params.require(:employee).permit(:name, :title, :location, :office, :direct, :department_id)
     end
 
 

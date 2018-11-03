@@ -34,6 +34,4 @@ class Api::V1::DepartmentsController < ApplicationController
         params.permit(:name)
     end
 
-
-
 end
